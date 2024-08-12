@@ -14,7 +14,7 @@ const Banner = () => {
         const fetchBanners = async () => {
             setLoading(true);
             try {
-                const response = await axios.get('/api/banners');
+                const response = await axios.get('http://13.232.173.108:3001/api/banners');
 
                 const sortedBanners = response.data.sort((a, b) => {
                     const currentTime = new Date().getTime();
@@ -36,9 +36,34 @@ const Banner = () => {
                 });
 
                 setBanners(sortedBanners);
-                setLoading(false);
             } catch (error) {
                 console.error("There was an error fetching the banners!", error);
+
+                // Fallback to dummy data
+                const dummyData = [
+                    {
+                        id: 1,
+                        title: 'Sample Banner 1',
+                        description: 'This is a sample banner.',
+                        endDateAndTime: new Date(Date.now() + 600000).toISOString(), // 10 minutes from now
+                        startDate: new Date(Date.now()).toISOString(),
+                        isExpired: false,
+                        isVisible: true
+                    },
+                    {
+                        id: 2,
+                        title: 'Sample Banner 2',
+                        description: 'This is another sample banner.',
+                        endDateAndTime: new Date(Date.now() + 1200000).toISOString(), // 20 minutes from now
+                        startDate: new Date(Date.now()).toISOString(),
+                        isExpired: false,
+                        isVisible: true
+                    }
+                ];
+
+                setBanners(dummyData);
+            } finally {
+                setLoading(false);
             }
         };
 
