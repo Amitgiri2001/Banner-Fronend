@@ -1,0 +1,147 @@
+.title {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #343a40;
+    /* margin: 4vh; */
+}
+
+.countdown {
+    position: absolute;
+    top: 5vh;
+    right: 9vw;
+    font-size: 1.2rem;
+    color: #495057;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.description {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin: 0 0 8vh;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.bannerCard {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.3s ease;
+    background: linear-gradient(135deg, #f8f9fa, #a2cbf4);
+}
+
+.bannerCard:hover {
+    background: linear-gradient(135deg, #f8f9fa, #26619b, );
+}
+
+.expiredOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    z-index: 2;
+}
+
+.expiredOverlay h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.expiredOverlay .clock {
+    font-size: 5rem;
+}
+
+.contentBlurred {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: .5rem;
+        color: black;
+        font-weight: 500;
+    }
+
+    .countdown {
+        font-size: .6rem;
+        color: black;
+    }
+
+
+    .description {
+        font-size: 1rem;
+        margin: 0 0 4vh;
+    }
+
+    .button {
+        font-size: .6rem;
+        border-radius: 3px;
+    }
+
+
+    .bannerCard {
+        height: 40vh;
+        padding: 15px;
+    }
+
+
+
+    .expiredOverlay h2 {
+        font-size: 1.2rem;
+        margin-bottom: .7rem;
+    }
+
+    .expiredOverlay h4 {
+        font-size: .7rem;
+
+    }
+
+    .expiredOverlay .clock {
+        font-size: 3rem;
+    }
+
+    .contentBlurred {
+        filter: blur(5px);
+        pointer-events: none;
+        user-select: none;
+    }
+
+}

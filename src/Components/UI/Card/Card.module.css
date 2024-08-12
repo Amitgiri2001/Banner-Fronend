@@ -1,0 +1,26 @@
+.card {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    /* padding: 80px; */
+    overflow: hidden;
+    /* text-align: center; */
+    transition: transform 0.3s ease;
+    margin: 5vh 5vh;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 500px) {
+    .card {
+        margin: 2vh 2.5vh;
+        background: linear-gradient(135deg, #b1d4f6, #051b32);
+    }
+
+}

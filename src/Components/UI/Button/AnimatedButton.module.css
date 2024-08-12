@@ -1,0 +1,38 @@
+.animatedButton {
+    padding: 5px 25px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 13px;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buttonText {
+    z-index: 1;
+}
+
+.sliderContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    pointer-events: none;
+}
+
+.slider {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 7px;
+    height: 160%;
+}

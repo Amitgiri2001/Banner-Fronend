@@ -1,0 +1,39 @@
+/* src/components/Dashboard/AddBannerForm.module.css */
+.addForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.addForm label {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.addForm input {
+    margin-top: 5px;
+    padding: 5px;
+    margin-left: 6px;
+}
+
+.addForm button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.addForm button:hover {
+    background-color: #0056b3;
+}
+
+.btn {
+    height: 2%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

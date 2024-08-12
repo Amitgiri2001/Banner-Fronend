@@ -1,0 +1,28 @@
+.banner {
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.heading {
+    font-size: 6vh;
+    margin-bottom: 10px;
+    width: max-content;
+    margin: 0 auto;
+    /* This centers the element */
+}
+
+.banner a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.banner a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .heading {
+        font-size: 2.5vh;
+    }
+}
