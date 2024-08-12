@@ -18,7 +18,7 @@ const Dashboard = () => {
     const [isLoading, setLoading] = useState(true);
     const [isSaveChangesClicked, setSaveChangesClicked] = useState(false);
     useEffect(() => {
-        axios.get('/api/banners')
+        axios.get('http://13.232.173.108:3001/api/banners')
             .then(response => {
                 setBanners(response.data);
                 setLoading(false);
@@ -49,7 +49,7 @@ const Dashboard = () => {
     const handleSubmit = (e) => {
         setSaveChangesClicked(true);
         e.preventDefault();
-        axios.put(`/api/banners/${selectedBanner.id}`, selectedBanner)
+        axios.put(`http://13.232.173.108:3001/api/banners/${selectedBanner.id}`, selectedBanner)
             .then(response => {
                 alert('Banner updated successfully');
                 handleModalClose();
@@ -77,7 +77,7 @@ const Dashboard = () => {
 
     const onConfirmClick = () => {
         setLoading(true);
-        axios.delete(`/api/banners/${selectedId}`).then((response) => {
+        axios.delete(`http://13.232.173.108:3001/api/banners/${selectedId}`).then((response) => {
             console.log(response.data);
             alert(response.data.message);
             setBanners(prevBanners => prevBanners.filter(banner => banner.id !== selectedId));
