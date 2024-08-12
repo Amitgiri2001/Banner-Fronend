@@ -73,7 +73,7 @@ const Banner = () => {
 
     const handleCountdownEnd = async (bannerId) => {
         try {
-            await axios.patch(`/api/banners/${bannerId}/expire`);
+            await axios.patch(`http://13.232.173.108:3001/api/banners/${bannerId}/expire`);
             console.log(`Banner with ID ${bannerId} expired and backend notified.`);
 
             // Update the state only if necessary to reduce re-renders
